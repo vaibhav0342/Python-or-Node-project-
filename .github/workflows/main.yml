@@ -3,22 +3,10 @@ name: Deployment Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
-  deploy-python:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
-    - name: Deploy Python App
-      run: |
-        cd hello-python
-        python app.py
-    
-  deploy-node:
+   deploy-node:
     runs-on: ubuntu-latest
     
     steps:
@@ -35,3 +23,5 @@ jobs:
         cd hello-node
         npm install
         node app.js
+  
+
