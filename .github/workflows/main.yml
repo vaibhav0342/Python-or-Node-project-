@@ -3,11 +3,10 @@ name: Deployment Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-
- deploy-python:
+  deploy-python:
     runs-on: ubuntu-latest
     
     steps:
@@ -16,12 +15,11 @@ jobs:
     
     - name: Deploy Python App
       run: |
-        cd prject/hello-python/
+        cd project/hello-python/
         python app.py
-        
-deploy-node:
-
-   runs-on: ubuntu-latest
+    
+  deploy-node:
+    runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
@@ -37,5 +35,3 @@ deploy-node:
         cd project/hello-node/
         npm install
         node app.js
-  
-
