@@ -20,7 +20,7 @@ jobs:
     
     - name: Deploy Node.js App
       run: |
-        cd hello-node
+        cd project/hello-node/
         npm install
         node app.js
   
